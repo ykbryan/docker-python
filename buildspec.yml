@@ -8,9 +8,9 @@ phases:
       - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
       - IMAGE_TAG=latest
       # - IMAGE_TAG=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
-      # - echo Getting image tag name
-      # - echo $CODEBUILD_RESOLVED_SOURCE_VERSION
-      # - echo $IMAGE_TAG
+      - echo Getting image tag name
+      - echo $CODEBUILD_RESOLVED_SOURCE_VERSION
+      - echo $IMAGE_TAG
   build:
     commands:
       - echo Build started on `date`
