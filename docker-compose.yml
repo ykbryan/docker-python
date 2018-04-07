@@ -6,6 +6,8 @@ services:
       - PYTHONUNBUFFERED=0
     build:
       context: .
-      dockerfile: ./docker_conf/python/Dockerfile
+    ports:
+      - 80:5000
     volumes:
       - ./logs:/code/logs
+      - .:/code
