@@ -7,7 +7,11 @@ def hello_world():
 
 @app.route('/flaskfargatedemo')
 def hello_fargate():
-    return 'Hell Fargate!'
+    return 'Hello Fargate!'
+
+@app.route('/api')
+def hello_fargate():
+    return 'Hello API Endpoint!'
 
 if __name__ == '__main__':
     app.run(debug=True,host='0.0.0.0')
