@@ -7,7 +7,7 @@ def hello_world():
 
 @app.route('/fargate')
 def hello_fargate():
-    return 'Hello Fargate!'
+    return 'Hello Fargate! asd'
 
 if __name__ == '__main__':
     app.run(debug=True,host='0.0.0.0')
