@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from flask import Flask
 app = Flask(__name__)
 
@@ -7,7 +8,11 @@ def hello_world():
 
 @app.route('/fargate')
 def hello_fargate():
-    return 'Hello Fargate! asd'
+    return 'Hello Fargate!'
+
+@app.route('/ec2')
+def hello_fargate():
+    return 'Hello ECS on EC2!'
 
 if __name__ == '__main__':
     app.run(debug=True,host='0.0.0.0')
